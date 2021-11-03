@@ -31,7 +31,7 @@ export default defineComponent({
       selectedImageUrl: "",
       workers: [] as unknown as Worker[],
       numberWorkers: window.navigator.hardwareConcurrency,
-      useSharedData: true,
+      useSharedData: (window as any).crossOriginIsolated,
       canUseSharedData: (window as any).crossOriginIsolated
     };
   },
