@@ -38,7 +38,14 @@
           :min="1"
           :showButtons="true"
         />
-        <div class="text-xs mt-1">For small images parallel computation tends to slow down processing.</div>
+        <div class="text-xs mt-1">
+          For small images parallel computation tends to slow down processing.
+        </div>
+      </div>
+
+      <div class="mt-5" v-if="canUseSharedData">
+        <h4 class="mt-0 mb-1">Use shared data</h4>
+        <Checkbox v-model="useSharedData" :binary="true" />
       </div>
 
       <div class="mt-5">
